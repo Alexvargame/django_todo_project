@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}
+    Base Title
+  {% endblock title %}</title>
+</head>
+{% include 'components/navbar.html' %}
+<body>
+  {% block body%}
+    Base Body
+  {% endblock body %}
+</body>
+{% include 'components/footer.html' %}
+</html>

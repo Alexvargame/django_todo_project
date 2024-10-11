@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>TODO App Index</title>
+{% extends 'base.html' %}
 
-</head>
-<body>
+{% block title%}
+    <title>TODO App Index</title>
+{% endblock title %}
+
+{% block body %}
     <h>Welcome to TODO App!</h>
     <h1>Work in progress</h1>
     <h2>It is {% now "jS F Y H:i"%}</h2>
-</body>
-</html>
+{% endblock body%}
