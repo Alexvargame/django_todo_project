@@ -1,0 +1,14 @@
+<ul>
+    {% for todo_item in object_list %}
+      <li>
+        <a href="{% url 'todo_list:detail_item' pk=todo_item.id %}">
+          {{todo_item.title}}</a>
+        {% if todo_item.done %}
+          <img src="todo-list/images/done.png" style="width: 100px; height: auto;">
+        {% else %}
+           <img src="todo_list/images/not_done.png" style="width: 100px; height: auto;">
+        {% endif%}
+
+      </li>
+    {% endfor %}
+  </ul>
