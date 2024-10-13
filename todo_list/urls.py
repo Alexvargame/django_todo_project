@@ -10,5 +10,6 @@ urlpatterns = [
     path('<int:pk>/', views.ToDoDetailView.as_view(), name='detail_item'),
     path('list/', views.ToDoListView.as_view(), name='list_items'),
     path('done/', views.ToDoListDoneView.as_view(), name='done_items'),
+    path('create/', views.ToDoItemCreateVieww.as_view(), name='create_item'),
 
 ]

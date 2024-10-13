@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.http import HttpResponse, HttpRequest
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, CreateView
 
 from .models import ToDoItem
+from .forms import ToDoItemForm
 
 def index_view(request):
     todo_items = ToDoItem.objects.all()
@@ -29,3 +30,9 @@ class ToDoListView(ListView):
 
 class ToDoDetailView(DetailView):
     model = ToDoItem
+
+class ToDoItemCreateVieww(CreateView):
+    model = ToDoItem
+    form_class = ToDoItemForm
+
+

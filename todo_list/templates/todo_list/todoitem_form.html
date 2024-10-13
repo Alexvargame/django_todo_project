@@ -1,0 +1,14 @@
+{% extends 'todo_list/base.html' %}
+
+{% block title %}
+  Create new ToDo Item
+{% endblock title %}
+
+{% block body %}
+<form method="post">
+  <h3>Create mew ToDo:</h3>
+  {% csrf_token%}
+  {{form.as_p}}
+  <button type="submit" >"Add"</button>
+</form>
+{% endblock body %}
